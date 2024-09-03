@@ -1,0 +1,127 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "DemoDebug",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/CPP_encoder_decoder/demo_api/main_demo.exe", // Set the path to your executable
+      // "program": "${workspaceFolder}/CPP_encoder_decoder/demo_api/${fileBasenameNoExtension}.exe",  // Set the path to your executable
+      "args": [],
+      "stopAtEntry": true,
+      "cwd": "${workspaceFolder}/CPP_encoder_decoder/demo_api/",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "g++ DEBUG Demo" // Specify the build task name
+    },
+    {
+      "name": "DemoDebugMinimal",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/CPP_encoder_decoder/demo_api/main_demo_minimal.exe", // Set the path to your executable
+      // "program": "${workspaceFolder}/CPP_encoder_decoder/demo_api/${fileBasenameNoExtension}.exe",  // Set the path to your executable
+      "args": [],
+      "stopAtEntry": true,
+      "cwd": "${workspaceFolder}/CPP_encoder_decoder/demo_api/",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "g++ DEBUG Minimal" // Specify the build task name
+    },
+    {
+      "name": "MainDebug",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/CPP_encoder_decoder/main.exe", // Set the path to your executable
+      // "program": "${workspaceFolder}/CPP_encoder_decoder/demo_api/${fileBasenameNoExtension}.exe",  // Set the path to your executable
+      // "args": [
+      //   "-i",
+      //   "C:\\DATA\\Repos\\OMLS_Masters_SW\\images\\live_images\\Airbus_binaries\\processed\\raw",
+      //   // "C:\\DATA\\Repos\\OMLS_Masters_SW\\images\\lite_dataset",
+      //   "-o",
+      //   "C:\\DATA\\Repos\\OMLS_Masters_SW\\images\\live_images\\Airbus_binaries\\processed\\raw",
+      //   // "C:\\DATA\\Repos\\OMLS_Masters_SW\\images\\lite_dataset",
+      //   "-s",
+      //   "0",
+      //   "-e",
+      //   "0",
+      //   "-l",
+      //   "0",
+      //   "-b",
+      //   "8",
+      //   // "16",
+      //   // "4",
+      //   "-c",
+      //   "-d",
+      //   "-x",
+      //   "4512",
+      //   "-y",
+      //   "4096"
+      // ],
+      "args": [
+        "-i",
+        // "C:/DATA/Repos/OMLS_Masters_SW/images/lite_dataset",
+        "C:/DATA/Repos/OMLS_Masters_SW/images/wallpapers",
+        "-o",
+        // "C:/DATA/Repos/OMLS_Masters_SW/images/lite_dataset",
+        "C:/DATA/Repos/OMLS_Masters_SW/images/wallpapers",
+        "-s",
+        "1",
+        "-e",
+        "1",
+        "-l",
+        "0",
+        "-b",
+        "16",
+        "-f",
+        "img_",
+        "-r",
+        "8",
+        // "10",
+        "-c",
+        "-B",
+        "1024",
+        "-d",
+        "-g",
+      ],
+      "stopAtEntry": true,
+      "cwd": "${workspaceFolder}/CPP_encoder_decoder",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      // "preLaunchTask": "g++ DEBUG Main" // Specify the build task name
+      "preLaunchTask": "C/C++: g++.exe Build active file DEBUG" // Specify the build task name
+    },
+    {
+      "name": "PythonDebug",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "cwd": "${fileDirname}",
+      "env": {},
+      "console": "integratedTerminal"
+    }
+  ]
+}

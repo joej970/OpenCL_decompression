@@ -1,0 +1,1 @@
+Run GUI_compress_decompress.py and navigate to folder wallpapers. Then first compress and later decompress images. Specify block sizes (0 for no separation into blocks.)

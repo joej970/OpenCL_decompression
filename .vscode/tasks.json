@@ -1,0 +1,238 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: g++.exe Build active file TEST_OUT",
+			"command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+			"args": [
+				"-D TEST_OUT",
+				"-std=c++20",
+				"-fdiagnostics-color=always",
+				"-g3",
+				"-Wall",
+				"${fileDirname}\\**.cpp",
+				"${fileDirname}\\**.dll",
+				"-o",
+				"${fileDirname}\\main.exe"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			},
+			"detail": "compiler: C:\\msys64\\mingw64\\bin\\g++.exe"
+		},
+
+		{
+			"type": "cppbuild",
+			"label": "C/C++: g++.exe Build active file",
+			"command": "C:/msys64/ucrt64/bin/g++.exe",
+			"args": [
+				"-D TIMING_EN",
+				"-D INCLUDE_OPENCL",
+				"-D MAIN",
+				"-std=c++20",
+				"-fdiagnostics-color=always",
+				"-o3",
+				// "-g",
+				"-Wall",
+				"-I", "C:\\Program Files (x86)\\Intel\\oneAPI\\2024.2\\include\\sycl",
+				"${fileDirname}\\**.cpp",
+				"${fileDirname}\\OpenCL_sources\\**.cpp",
+				"-o",
+				"${fileDirname}\\main.exe",
+				"-L", "C:\\Program Files (x86)\\Intel\\oneAPI\\2024.2\\lib",
+				"-lOpenCL"
+			],
+			"options": {
+				"cwd": "C:/msys64/ucrt64/bin"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: C:\\msys64\\mingw64\\bin\\g++.exe"
+		},
+		{
+			"type": "cppbuild",
+			"label": "C/C++: g++.exe Build active file DEBUG",
+			"command": "C:/msys64/ucrt64/bin/g++.exe",
+			"args": [
+				"-D TIMING_EN",
+				"-D INCLUDE_OPENCL",
+				"-D MAIN",
+				"-D DEBUG",
+				"-std=c++20",
+				"-fdiagnostics-color=always",
+				// "-o3",
+				"-g",
+				"-Wall",
+				"-I", "C:\\Program Files (x86)\\Intel\\oneAPI\\2024.2\\include\\sycl",
+				"${fileDirname}\\**.cpp",
+				"${fileDirname}\\OpenCL_sources\\**.cpp",
+				"-o",
+				"${fileDirname}\\main.exe",
+				"-L", "C:\\Program Files (x86)\\Intel\\oneAPI\\2024.2\\lib",
+				"-lOpenCL"
+			],
+			"options": {
+				"cwd": "C:/msys64/ucrt64/bin"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: C:\\msys64\\mingw64\\bin\\g++.exe"
+		},
+
+		{
+			"type": "cppbuild",
+			"label": "g++ DEBUG Main",
+			"command": "C:/msys64/ucrt64/bin/g++.exe",
+			"args": [
+				"-D TIMING_EN",
+				"-D MAIN",
+				"-std=c++20",
+				"-fdiagnostics-color=always",
+				"-g",
+				"-Wall",
+				"${fileDirname}\\**.cpp",
+				"-o",
+				"${fileDirname}\\main.exe"
+			],
+			"options": {
+				"cwd": "C:/msys64/ucrt64/bin"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			},
+			"detail": "compiler: C:\\msys64\\mingw64\\bin\\g++.exe"
+		},
+
+		{
+			"type": "cppbuild",
+			"label": "g++ DEBUG Demo Minimal",
+			"command": "C:/msys64/ucrt64/bin/g++.exe",
+			"args": [
+				"-D MAIN_MINIMAL",
+				"-std=c++20",
+				"-fdiagnostics-color=always",
+				"-g",
+				"-Wall",
+				"${fileDirname}\\**.cpp",
+				"${fileDirname}\\**.dll",
+				"-o",
+				"${fileDirname}\\main_demo_minimal.exe"
+			],
+			"options": {
+				"cwd": "C:/msys64/ucrt64/bin"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			},
+			"detail": "compiler: C:\\msys64\\mingw64\\bin\\g++.exe"
+		},
+
+		{
+			"type": "cppbuild",
+			"label": "g++ DEBUG Demo",
+			"command": "C:/msys64/ucrt64/bin/g++.exe",
+			"args": [
+				"-D TIMING_EN",
+				"-D MAIN_DEMO",
+				"-std=c++20",
+				"-fdiagnostics-color=always",
+				"-g",
+				"-Wall",
+				"${fileDirname}\\**.cpp",
+				"${fileDirname}\\**.dll",
+				"-o",
+				"${fileDirname}\\main_demo.exe"
+			],
+			"options": {
+				"cwd": "C:/msys64/ucrt64/bin"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: C:\\msys64\\mingw64\\bin\\g++.exe"
+		},
+		{
+			"type": "shell",
+			"label": "C/C++: g++.exe Build & Run active file",
+			"command": "C:\\msys64\\mingw64\\bin\\g++.exe -std=c++20 -g3 -Wall \"${fileDirname}\\**.cpp\" -o \"${fileDirname}\\${fileBasenameNoExtension}.exe\" && \"${fileDirname}\\${fileBasenameNoExtension}.exe\"",
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"detail": "compiler: C:\\msys64\\mingw64\\bin\\g++.exe"
+		},
+		// {
+		// 	"type": "cppbuild",
+		// 	"label": "C/C++: g++.exe build active file",
+		// 	"command": "C:/msys64/ucrt64/bin/g++.exe",
+		// 	"args": [
+		// 		"-fdiagnostics-color=always",
+		// 		"-g",
+		// 		"${file}",
+		// 		"-o",
+		// 		"${fileDirname}\\${fileBasenameNoExtension}.exe"
+		// 	],
+		// 	"options": {
+		// 		"cwd": "C:/msys64/ucrt64/bin"
+		// 	},
+		// 	"problemMatcher": [
+		// 		"$gcc"
+		// 	],
+		// 	"group": "build",
+		// 	"detail": "compiler: C:/msys64/ucrt64/bin/g++.exe"
+		// },
+		{
+			"type": "cppbuild",
+			"label": "C/C++: g++.exe build active file",
+			"command": "C:/msys64/ucrt64/bin/g++.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"${file}",
+				"-o",
+				// "${fileDirname}\\${fileBasenameNoExtension}.exe"
+				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "C:/msys64/ucrt64/bin"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			},
+			"detail": "compiler: C:/msys64/ucrt64/bin/g++.exe"
+		}
+	]
+}
